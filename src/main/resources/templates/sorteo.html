@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear boleta</title>
+</head>
+<body>
+<form action="#" th:action="@{/sorteo/crear}" th:object="${sorteo}" method="post" >
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" th:field="*{nombre}" required>
+  <label for="fecha">Fecha:</label>
+  <input type="date" id="fecha" name="fecha" th:field="*{fecha}" required>
+  <label for="boletas">Boletas:</label>
+  <input type="number" id="boletas" name="boletas" th:field="*{boletas}" required>
+  <label for="numeros">Numeros:</label>
+  <input type="text" id="numeros" name="numeros" th:field="*{numeros}" required>
+  <label for="maximo">Maximo:</label>
+  <input type="text" id="maximo" name="maximo" th:field="*{maximo}" required>
+  <button type="submit">Registrar</button>
+</form>
+</body>
+</html>

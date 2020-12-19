@@ -4,7 +4,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+
 import java.time.LocalDate;
+import java.util.Date;
 
 @Table(name = "sorteo")
 @Entity
@@ -17,7 +19,7 @@ public class Sorteo implements Serializable {
   private Integer boletas;
 
   @Column(name = "fecha")
-  private LocalDate fecha;
+  private Date fecha;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
