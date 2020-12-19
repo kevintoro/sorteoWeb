@@ -1,6 +1,7 @@
 package com.learn.blacklabel.sorteo.model;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,6 +19,7 @@ public class Sorteo implements Serializable {
   @Column(name = "boletas")
   private Integer boletas;
 
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
   @Column(name = "fecha")
   private Date fecha;
 

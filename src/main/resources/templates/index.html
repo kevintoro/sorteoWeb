@@ -32,7 +32,17 @@
     <td th:text="${sorteo.getFecha()}"></td>
     <td th:text="${sorteo.getBoletas()}"></td>
     <td th:text="${sorteo.getNumeros()}"></td>
-    <td></td>
+    <td>
+      <a >
+        Generar
+      </a>
+      <a th:href="@{/sorteo/registrar/{id}(id=${sorteo.id})}">
+        Registrar
+      </a>
+      <a href="#">
+        Sortear
+      </a>
+    </td>
   </tr>
   </tbody>
 </table>
